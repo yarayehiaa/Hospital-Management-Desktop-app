@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="427.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AddMemberController">
+   <children>
+      <Label layoutX="16.0" layoutY="62.0" prefHeight="25.0" prefWidth="330.0" text="Fill in data to add new hospital personnel" textFill="GREY">
+         <font>
+            <Font name="Microsoft Sans Serif" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="143.0" text="Name:">
+         <font>
+            <Font name="Microsoft Sans Serif" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="206.0" text="Speciality:">
+         <font>
+            <Font name="Microsoft Sans Serif" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="272.0" text="Password:">
+         <font>
+            <Font name="Microsoft Sans Serif" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameText" layoutX="55.0" layoutY="166.0" prefHeight="25.0" prefWidth="252.0" />
+      <TextField fx:id="specialtyText" layoutX="55.0" layoutY="231.0" prefHeight="25.0" prefWidth="252.0" />
+      <PasswordField fx:id="passText" layoutX="55.0" layoutY="295.0" prefHeight="25.0" prefWidth="252.0" />
+      <Button layoutX="92.0" layoutY="339.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="37.0" prefWidth="215.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Sans Serif" size="15.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="doctorRadio" layoutX="53.0" layoutY="112.0" mnemonicParsing="false" onAction="#specialtyEnable" text="Doctor">
+         <toggleGroup>
+            <ToggleGroup fx:id="staffMember" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="nurseRadio" layoutX="146.0" layoutY="112.0" mnemonicParsing="false" onAction="#specialtyDisable" text="Nurse" toggleGroup="$staffMember" />
+      <RadioButton fx:id="techRadio" layoutX="230.0" layoutY="112.0" mnemonicParsing="false" onAction="#specialtyDisable" text="Technician" toggleGroup="$staffMember" />
+      <Button layoutX="46.0" layoutY="343.0" mnemonicParsing="false" onAction="#BackButton" style="-fx-background-color: transparent;">
+         <graphic>
+            <FontAwesomeIconView fill="#0f9d58" glyphName="ARROW_LEFT" size="25" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

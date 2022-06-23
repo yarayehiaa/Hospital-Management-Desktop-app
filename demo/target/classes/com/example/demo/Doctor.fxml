@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="379.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DoctorController">
+   <children>
+      <Button layoutX="21.0" layoutY="32.0" mnemonicParsing="false" onAction="#calculateOvertime" prefHeight="56.0" prefWidth="187.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="Calculate Overtime" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Sans Serif" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="436.0" layoutY="32.0" mnemonicParsing="false" onAction="#clickSurgery" prefHeight="56.0" prefWidth="187.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="Schedule Surgery" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="235.0" mnemonicParsing="false" onAction="#clickShowData" prefHeight="56.0" prefWidth="813.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="View Data" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Sans Serif" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="229.0" layoutY="32.0" mnemonicParsing="false" onAction="#calculateRemainingDays" prefHeight="56.0" prefWidth="187.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="Remaining Vacation Days" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="21.0" layoutY="116.0" text="Patients:" textFill="GREY">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="783.0" layoutY="319.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="38.0" prefWidth="26.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <FontAwesomeIconView fill="#0f9d58" glyphName="POWER_OFF" size="40" />
+         </graphic>
+      </Button>
+      <ComboBox fx:id="patientsCombo" layoutX="22.0" layoutY="161.0" prefHeight="25.0" prefWidth="813.0" />
+      <Button layoutX="649.0" layoutY="32.0" mnemonicParsing="false" onAction="#clickDetails" prefHeight="56.0" prefWidth="187.0" style="-fx-background-color: rgb(15,157,88); -fx-font-weight: bolder;" text="Surgery Details" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
